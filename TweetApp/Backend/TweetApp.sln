@@ -1,0 +1,60 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32616.157
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{2B02D6FA-7806-4CEE-BB3E-3FD72DC38443}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TweetApp.Model", "TweetApp.Model\TweetApp.Model.csproj", "{24987BC3-C0E1-4B15-899C-0191B455311B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TweetApp.Service", "TweetApp.Service\TweetApp.Service.csproj", "{5F36926F-C30A-4627-861D-BA021C71505D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TweetApp.Repository", "TweetApp.Repository\TweetApp.Repository.csproj", "{FD3B9CA6-571D-4F00-A570-0A53419161A7}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TweetApp.Api", "TweetApp.Api\TweetApp.Api.csproj", "{01883DDF-6EE8-4E7B-BBEB-8910E2F46BAE}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TweetAppTest", "TweetAppTest\TweetAppTest.csproj", "{90050756-22EA-4B2D-9324-8C777101F518}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{31572A6D-DAC1-4F56-B530-AC4DF5DF775A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{24987BC3-C0E1-4B15-899C-0191B455311B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{24987BC3-C0E1-4B15-899C-0191B455311B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{24987BC3-C0E1-4B15-899C-0191B455311B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{24987BC3-C0E1-4B15-899C-0191B455311B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5F36926F-C30A-4627-861D-BA021C71505D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5F36926F-C30A-4627-861D-BA021C71505D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5F36926F-C30A-4627-861D-BA021C71505D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5F36926F-C30A-4627-861D-BA021C71505D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FD3B9CA6-571D-4F00-A570-0A53419161A7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FD3B9CA6-571D-4F00-A570-0A53419161A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FD3B9CA6-571D-4F00-A570-0A53419161A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FD3B9CA6-571D-4F00-A570-0A53419161A7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{01883DDF-6EE8-4E7B-BBEB-8910E2F46BAE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{01883DDF-6EE8-4E7B-BBEB-8910E2F46BAE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{01883DDF-6EE8-4E7B-BBEB-8910E2F46BAE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{01883DDF-6EE8-4E7B-BBEB-8910E2F46BAE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{90050756-22EA-4B2D-9324-8C777101F518}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{90050756-22EA-4B2D-9324-8C777101F518}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{90050756-22EA-4B2D-9324-8C777101F518}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{90050756-22EA-4B2D-9324-8C777101F518}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{24987BC3-C0E1-4B15-899C-0191B455311B} = {2B02D6FA-7806-4CEE-BB3E-3FD72DC38443}
+		{5F36926F-C30A-4627-861D-BA021C71505D} = {2B02D6FA-7806-4CEE-BB3E-3FD72DC38443}
+		{FD3B9CA6-571D-4F00-A570-0A53419161A7} = {2B02D6FA-7806-4CEE-BB3E-3FD72DC38443}
+		{01883DDF-6EE8-4E7B-BBEB-8910E2F46BAE} = {2B02D6FA-7806-4CEE-BB3E-3FD72DC38443}
+		{90050756-22EA-4B2D-9324-8C777101F518} = {31572A6D-DAC1-4F56-B530-AC4DF5DF775A}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DA150DF0-CF00-4A2D-B504-185E40FD0B4D}
+	EndGlobalSection
+EndGlobal
