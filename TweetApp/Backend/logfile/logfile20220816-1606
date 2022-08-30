@@ -1,0 +1,6 @@
+2022-08-16 16:06:09,927 INFO  Microsoft.EntityFrameworkCore.Infrastructure.? [?] - MESSAGE: Entity Framework Core 6.0.8 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.8' with options: None
+2022-08-16 16:06:10,408 INFO  TweetApp.Api.Controllers.UsersController.MoveNext [57] - MESSAGE: Registering user
+2022-08-16 16:06:12,342 INFO  Microsoft.EntityFrameworkCore.Database.Command.? [?] - MESSAGE: Executed DbCommand (182ms) [Parameters=[@__username_0='?' (Size = 15)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[LoginId], [u].[ContactNumber], [u].[Email], [u].[FirstName], [u].[IsActive], [u].[LastName], [u].[Password]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__username_0

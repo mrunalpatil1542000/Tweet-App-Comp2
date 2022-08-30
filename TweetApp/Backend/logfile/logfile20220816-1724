@@ -1,0 +1,34 @@
+2022-08-16 17:24:18,009 INFO  Microsoft.EntityFrameworkCore.Infrastructure.? [?] - MESSAGE: Entity Framework Core 6.0.8 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.8' with options: None
+2022-08-16 17:24:18,017 INFO  TweetApp.Api.Controllers.UsersController.MoveNext [202] - MESSAGE: Getting logged in user
+2022-08-16 17:24:18,031 INFO  Microsoft.EntityFrameworkCore.Database.Command.? [?] - MESSAGE: Executed DbCommand (5ms) [Parameters=[@__username_0='?' (Size = 15)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[LoginId], [u].[ContactNumber], [u].[Email], [u].[FirstName], [u].[IsActive], [u].[LastName], [u].[Password]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__username_0
+2022-08-16 17:24:18,040 INFO  TweetApp.Api.Controllers.UsersController.MoveNext [206] - MESSAGE: Got current user
+2022-08-16 17:24:19,104 INFO  Microsoft.EntityFrameworkCore.Infrastructure.? [?] - MESSAGE: Entity Framework Core 6.0.8 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.8' with options: None
+2022-08-16 17:24:19,126 INFO  Microsoft.EntityFrameworkCore.Database.Command.? [?] - MESSAGE: Executed DbCommand (13ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [t].[Id], [t].[DatePosted], [t].[Subject], [t].[Tag], [t].[UserId], [u].[LoginId], [u].[ContactNumber], [u].[Email], [u].[FirstName], [u].[IsActive], [u].[LastName], [u].[Password]
+FROM [Tweets] AS [t]
+INNER JOIN [Users] AS [u] ON [t].[UserId] = [u].[LoginId]
+2022-08-16 17:24:20,163 INFO  Microsoft.EntityFrameworkCore.Infrastructure.? [?] - MESSAGE: Entity Framework Core 6.0.8 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.8' with options: None
+2022-08-16 17:24:20,167 INFO  Microsoft.EntityFrameworkCore.Infrastructure.? [?] - MESSAGE: Entity Framework Core 6.0.8 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.8' with options: None
+2022-08-16 17:24:20,174 INFO  Microsoft.EntityFrameworkCore.Infrastructure.? [?] - MESSAGE: Entity Framework Core 6.0.8 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.8' with options: None
+2022-08-16 17:24:20,190 INFO  Microsoft.EntityFrameworkCore.Database.Command.? [?] - MESSAGE: Executed DbCommand (8ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [r].[Id], [r].[Reactions], [r].[TweetId], [r].[UserId]
+FROM [Reactions] AS [r]
+WHERE [r].[TweetId] = @__id_0
+2022-08-16 17:24:20,225 INFO  Microsoft.EntityFrameworkCore.Database.Command.? [?] - MESSAGE: Executed DbCommand (10ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [r].[Id], [r].[Reactions], [r].[TweetId], [r].[UserId]
+FROM [Reactions] AS [r]
+WHERE [r].[TweetId] = @__id_0
+2022-08-16 17:24:20,231 INFO  Microsoft.EntityFrameworkCore.Database.Command.? [?] - MESSAGE: Executed DbCommand (58ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [r].[Id], [r].[Reactions], [r].[TweetId], [r].[UserId]
+FROM [Reactions] AS [r]
+WHERE [r].[TweetId] = @__id_0
+2022-08-16 17:24:56,103 INFO  Microsoft.EntityFrameworkCore.Infrastructure.? [?] - MESSAGE: Entity Framework Core 6.0.8 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.8' with options: None
+2022-08-16 17:24:56,117 INFO  TweetApp.Api.Controllers.UsersController.MoveNext [103] - MESSAGE: User Logging
+2022-08-16 17:24:56,132 INFO  Microsoft.EntityFrameworkCore.Database.Command.? [?] - MESSAGE: Executed DbCommand (5ms) [Parameters=[@__username_0='?' (Size = 15), @__password_1='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[LoginId], [u].[ContactNumber], [u].[Email], [u].[FirstName], [u].[IsActive], [u].[LastName], [u].[Password]
+FROM [Users] AS [u]
+WHERE ([u].[Email] = @__username_0) AND ([u].[Password] = @__password_1)
+2022-08-16 17:24:56,141 INFO  TweetApp.Api.Controllers.UsersController.MoveNext [113] - MESSAGE: User Logged in

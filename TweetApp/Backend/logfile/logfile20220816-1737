@@ -1,0 +1,11 @@
+2022-08-16 17:37:02,374 INFO  Microsoft.EntityFrameworkCore.Infrastructure.? [?] - MESSAGE: Entity Framework Core 6.0.8 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.8' with options: None
+2022-08-16 17:37:02,392 INFO  Microsoft.EntityFrameworkCore.Database.Command.? [?] - MESSAGE: Executed DbCommand (8ms) [Parameters=[@__id_0='?' (DbType = Int32), @__username_1='?' (Size = 15)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [t].[Id], [t].[DatePosted], [t].[Subject], [t].[Tag], [t].[UserId], [u].[LoginId], [u].[ContactNumber], [u].[Email], [u].[FirstName], [u].[IsActive], [u].[LastName], [u].[Password]
+FROM [Tweets] AS [t]
+INNER JOIN [Users] AS [u] ON [t].[UserId] = [u].[LoginId]
+WHERE ([t].[Id] = @__id_0) AND ([u].[Email] = @__username_1)
+2022-08-16 17:37:02,404 INFO  Microsoft.EntityFrameworkCore.Database.Command.? [?] - MESSAGE: Executed DbCommand (3ms) [Parameters=[@p0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+DELETE FROM [Tweets]
+WHERE [Id] = @p0;
+SELECT @@ROWCOUNT;

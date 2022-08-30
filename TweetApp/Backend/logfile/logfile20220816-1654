@@ -1,0 +1,12 @@
+2022-08-16 16:54:07,192 INFO  Microsoft.Hosting.Lifetime.? [?] - MESSAGE: Now listening on: https://localhost:7055
+2022-08-16 16:54:07,362 INFO  Microsoft.Hosting.Lifetime.? [?] - MESSAGE: Now listening on: http://localhost:5055
+2022-08-16 16:54:07,377 INFO  Microsoft.Hosting.Lifetime.OnApplicationStarted [0] - MESSAGE: Application started. Press Ctrl+C to shut down.
+2022-08-16 16:54:07,384 INFO  Microsoft.Hosting.Lifetime.OnApplicationStarted [0] - MESSAGE: Hosting environment: Development
+2022-08-16 16:54:07,390 INFO  Microsoft.Hosting.Lifetime.OnApplicationStarted [0] - MESSAGE: Content root path: C:\Users\cogdotnet982\source\UseCase-2\TweetApp\Backend\TweetApp.Api\
+2022-08-16 16:54:39,073 INFO  Microsoft.EntityFrameworkCore.Infrastructure.? [?] - MESSAGE: Entity Framework Core 6.0.8 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.8' with options: None
+2022-08-16 16:54:39,378 INFO  TweetApp.Api.Controllers.UsersController.MoveNext [202] - MESSAGE: Getting logged in user
+2022-08-16 16:54:41,104 INFO  Microsoft.EntityFrameworkCore.Database.Command.? [?] - MESSAGE: Executed DbCommand (163ms) [Parameters=[@__username_0='?' (Size = 15)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[LoginId], [u].[ContactNumber], [u].[Email], [u].[FirstName], [u].[IsActive], [u].[LastName], [u].[Password]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__username_0
+2022-08-16 16:54:41,363 INFO  TweetApp.Api.Controllers.UsersController.MoveNext [206] - MESSAGE: Got current user

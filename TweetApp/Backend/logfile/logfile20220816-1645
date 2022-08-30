@@ -1,0 +1,34 @@
+2022-08-16 16:45:09,870 INFO  Microsoft.EntityFrameworkCore.Infrastructure.? [?] - MESSAGE: Entity Framework Core 6.0.8 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.8' with options: None
+2022-08-16 16:45:09,901 INFO  Microsoft.EntityFrameworkCore.Database.Command.? [?] - MESSAGE: Executed DbCommand (12ms) [Parameters=[@__username_0='?' (Size = 15)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[LoginId], [u].[ContactNumber], [u].[Email], [u].[FirstName], [u].[IsActive], [u].[LastName], [u].[Password]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__username_0
+2022-08-16 16:45:09,936 INFO  Microsoft.EntityFrameworkCore.Database.Command.? [?] - MESSAGE: Executed DbCommand (6ms) [Parameters=[@p0='?' (DbType = DateTime2), @p1='?' (Size = 144), @p2='?' (Size = 50), @p3='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Tweets] ([DatePosted], [Subject], [Tag], [UserId])
+VALUES (@p0, @p1, @p2, @p3);
+SELECT [Id]
+FROM [Tweets]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+2022-08-16 16:45:16,541 INFO  Microsoft.EntityFrameworkCore.Infrastructure.? [?] - MESSAGE: Entity Framework Core 6.0.8 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.8' with options: None
+2022-08-16 16:45:16,573 INFO  Microsoft.EntityFrameworkCore.Database.Command.? [?] - MESSAGE: Executed DbCommand (22ms) [Parameters=[@__id_0='?' (DbType = Int32), @__username_1='?' (Size = 15)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [t].[Id], [t].[DatePosted], [t].[Subject], [t].[Tag], [t].[UserId], [u].[LoginId], [u].[ContactNumber], [u].[Email], [u].[FirstName], [u].[IsActive], [u].[LastName], [u].[Password]
+FROM [Tweets] AS [t]
+INNER JOIN [Users] AS [u] ON [t].[UserId] = [u].[LoginId]
+WHERE ([t].[Id] = @__id_0) AND ([u].[Email] = @__username_1)
+2022-08-16 16:45:16,747 INFO  Microsoft.EntityFrameworkCore.Database.Command.? [?] - MESSAGE: Executed DbCommand (163ms) [Parameters=[@p0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+DELETE FROM [Tweets]
+WHERE [Id] = @p0;
+SELECT @@ROWCOUNT;
+2022-08-16 16:45:35,423 INFO  Microsoft.EntityFrameworkCore.Infrastructure.? [?] - MESSAGE: Entity Framework Core 6.0.8 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.8' with options: None
+2022-08-16 16:45:35,441 INFO  Microsoft.EntityFrameworkCore.Database.Command.? [?] - MESSAGE: Executed DbCommand (9ms) [Parameters=[@__id_0='?' (DbType = Int32), @__username_1='?' (Size = 15)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [t].[Id], [t].[DatePosted], [t].[Subject], [t].[Tag], [t].[UserId], [u].[LoginId], [u].[ContactNumber], [u].[Email], [u].[FirstName], [u].[IsActive], [u].[LastName], [u].[Password]
+FROM [Tweets] AS [t]
+INNER JOIN [Users] AS [u] ON [t].[UserId] = [u].[LoginId]
+WHERE ([t].[Id] = @__id_0) AND ([u].[Email] = @__username_1)
+2022-08-16 16:45:35,605 INFO  Microsoft.EntityFrameworkCore.Database.Command.? [?] - MESSAGE: Executed DbCommand (154ms) [Parameters=[@p0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+DELETE FROM [Tweets]
+WHERE [Id] = @p0;
+SELECT @@ROWCOUNT;

@@ -1,0 +1,13 @@
+2022-08-16 15:56:22,933 INFO  Microsoft.EntityFrameworkCore.Infrastructure.? [?] - MESSAGE: Entity Framework Core 6.0.8 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.8' with options: None
+2022-08-16 15:56:22,946 INFO  TweetApp.Api.Controllers.UsersController.MoveNext [57] - MESSAGE: Registering user
+2022-08-16 15:56:22,968 INFO  Microsoft.EntityFrameworkCore.Database.Command.? [?] - MESSAGE: Executed DbCommand (4ms) [Parameters=[@__username_0='?' (Size = 15)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[LoginId], [u].[ContactNumber], [u].[Email], [u].[FirstName], [u].[IsActive], [u].[LastName], [u].[Password]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__username_0
+2022-08-16 15:56:22,988 INFO  Microsoft.EntityFrameworkCore.Database.Command.? [?] - MESSAGE: Executed DbCommand (5ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (Size = 15), @p2='?' (Size = 4000), @p3='?' (DbType = Boolean), @p4='?' (Size = 4000), @p5='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Users] ([ContactNumber], [Email], [FirstName], [IsActive], [LastName], [Password])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);
+SELECT [LoginId]
+FROM [Users]
+WHERE @@ROWCOUNT = 1 AND [LoginId] = scope_identity();

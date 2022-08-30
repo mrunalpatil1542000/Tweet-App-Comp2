@@ -1,0 +1,5 @@
+2022-08-16 12:01:51,421 INFO  Microsoft.Hosting.Lifetime.? [?] - MESSAGE: Now listening on: https://localhost:7055
+2022-08-16 12:01:51,818 INFO  Microsoft.Hosting.Lifetime.? [?] - MESSAGE: Now listening on: http://localhost:5055
+2022-08-16 12:01:51,841 INFO  Microsoft.Hosting.Lifetime.OnApplicationStarted [0] - MESSAGE: Application started. Press Ctrl+C to shut down.
+2022-08-16 12:01:51,853 INFO  Microsoft.Hosting.Lifetime.OnApplicationStarted [0] - MESSAGE: Hosting environment: Development
+2022-08-16 12:01:51,858 INFO  Microsoft.Hosting.Lifetime.OnApplicationStarted [0] - MESSAGE: Content root path: C:\Users\cogdotnet982\source\UseCase-2\TweetApp\Backend\TweetApp.Api\

@@ -1,0 +1,6 @@
+2022-08-16 16:34:09,721 INFO  Microsoft.EntityFrameworkCore.Infrastructure.? [?] - MESSAGE: Entity Framework Core 6.0.8 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.8' with options: None
+2022-08-16 16:34:09,730 INFO  TweetApp.Api.Controllers.UsersController.MoveNext [35] - MESSAGE: Getting all users
+2022-08-16 16:34:09,796 INFO  Microsoft.EntityFrameworkCore.Database.Command.? [?] - MESSAGE: Executed DbCommand (12ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [u].[LoginId], [u].[ContactNumber], [u].[Email], [u].[FirstName], [u].[IsActive], [u].[LastName], [u].[Password]
+FROM [Users] AS [u]
+2022-08-16 16:34:09,810 INFO  TweetApp.Api.Controllers.UsersController.MoveNext [39] - MESSAGE: User list retrieved successfully
